@@ -1,3 +1,15 @@
+h1, h2, h3, .subheading1, a{
+    font-family: 'Bellefair', serif;
+    font-weight: lighter;
+}
+
+.subheading2, header a, .bodyText{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 100;
+}
+
+/*-------------------Index--------------------------------------*/
+
 #indexBody{
     background-image: url("../assets/home/background-home-mobile.jpg");
     object-fit: cover;
@@ -5,4 +17,142 @@
     margin: 0;
     padding: 0;
     color: white;
+
+    padding: 25px;
 }
+/*#################Header################START#*/
+/*===========Navbar============START===*/
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-container{
+    display: none;
+}
+
+/*===========Hamburger Menu============START===*/
+
+#hamburger{
+    position: relative;
+    display: none;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#hamburger #bar, #hamburger::after, #hamburger::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #D0D6F9;
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+#hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+#hamburger.is-active #bar{
+    opacity: 0;
+}
+
+#hamburger.is-active::after {
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+
+@media (max-width: 900px) {
+    .navbar-container nav{
+        display: none;
+    }
+
+    #hamburger{
+        display: block;
+    }
+}
+
+
+/*===========Hamburger Menu============END===*/
+
+/*#################Header###############END#*/
+
+/*#################Index Main##############START#*/
+
+#indexMain .textbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    text-align: center;
+    padding: 2.5rem 0 0 0;
+}
+
+#indexMain .textbox .subheading2{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    padding-bottom: 2rem;
+}
+
+#indexMain .textbox h2{
+    text-transform: uppercase;
+    font-size: 84px;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+#indexMain .textbox .bodyText{
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0;
+
+    line-height: 1.6rem;
+
+    padding-bottom: 2rem;
+}
+
+#exploreButton{
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#exploreButton a{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #0B0D17;
+    text-decoration: none;
+}
+/*#################Index Main##############END#*/
+
+/*-------------------Destination Moon--------------------------------------*/
+
+#moonBody{
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: white;
+
+    padding: 25px;
+}
+
+/*#################Moon Main##############START#*/
+/*#################Moon Main##############END#*/
